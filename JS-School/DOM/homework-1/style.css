@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    list-style: none;
+}
+
+.list__item-row {
+    padding: 5px;
+    cursor: default;
+}
+
+.list__item:nth-child(odd) .list__item-row {
+    background-color: #e9e9e9;
+}
+
+.list__item-triangle {
+    width: 0px;
+    height: 0px;
+    margin-right: 8px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 9px solid #8a8a8a;
+}
+
+.list__item .list .list__item:nth-of-type(odd) .list__item-row {
+    background-color: #fff;
+}
+
+.list__item.is-active .list .list__item .list__item-row {
+    background-color: lightblue;
+}
+
+.list__item:nth-of-type(odd) .list__item-row {
+    background-color: #e9e9e9;
+}
+
+.list__item-row {
+    display: flex;
+    align-items: center;
+}
+
+.list__item-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.list__item-title {
+    margin-left: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.list__item > .list {
+    display: none;
+}
+
+.list__item.is-opened > .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list__item.is-opened > .list__item-row .list__item-triangle {
+    transform: rotate(90deg);
+}
+
+.list__item.is-opened > .list .list__item-row {
+    padding-left: 20px;
+}
+
+.list__item.is-active .list__item-row {
+    background-color: lightblue;
+}
